@@ -25,22 +25,22 @@ const Navbar = () => {
                     </button>
                 </div>
                 <div className="hidden md:flex items-center">
-                    <a href="/" className="mx-2 text-blue-500 hover:text-blue-800">Home</a>
-                    <a href="/components" className="mx-2 text-blue-500 hover:text-blue-800">Components</a>
-                    <a href="/contact" className="mx-2 text-blue-500 hover:text-blue-800">Contact</a>
+                    <a href="/" className="mx-2 text-gray-50 hover:text-gray-300">Home</a>
+                    <a href="/components" className="mx-2 text-gray-50 hover:text-gray-300">Components</a>
+                    <a href="/contact" className="mx-2 text-gray-50 hover:text-gray-300">Contact</a>
                 </div>
             </div>
             {isOpen && (
                 <div className="fixed inset-0 bg-gray-400 flex items-center justify-center md:hidden">
                     <ul>
                         <li className="my-2">
-                            <a href="/" className="text-blue-500 hover:text-blue-800">Home</a>
+                            <a href="/" className="text-gray-50 hover:text-gray-300">Home</a>
                         </li>
                         <li className="my-2">
-                            <a href="/components" className="text-blue-500 hover:text-blue-800">Components</a>
+                            <a href="/components" className="text-gray-50 hover:text-gray-300">Components</a>
                         </li>
                         <li className="my-2">
-                            <a href="/contact" className="text-blue-500 hover:text-blue-800">Contact</a>
+                            <a href="/contact" className="text-gray-50 hover:text-gray-300">Contact</a>
                         </li>
                     </ul>
                 </div>

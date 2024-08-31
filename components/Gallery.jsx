@@ -1,26 +1,13 @@
-import React from 'react';
+import React from 'react'
+import Gallery1 from './gallery/Gallery1'
 
-const Gallery = () => {
-    const images = [
-        'img1.jpg',
-        'img2.jpg',
-        'img3.jpg',
-    ];
-
-    return (
-        <div className='text-center'>
-            <h1 className='mb-2 text-3xl'>Gallery</h1>
-        <div className="grid grid-cols-3 gap-4">
-            {images.map((image, index) => (
-                <div key={index} className="overflow-hidden shadow-lg rounded-lg h-64 w-64 md:w-64 md:h-64 cursor-pointer m-auto">
-                    <a href={image}>
-                        <img alt="gallery" className="w-full h-full object-cover" src={image} />
-                    </a>
-                </div>
-            ))}
-        </div>
-            </div>
-    );
+const Galery = () => {
+  return (
+    <div className="flex flex-col mt-24 gap-5">
+      <h1 className="text-3xl mb-2 text-center">Gallery</h1>
+      <Gallery1></Gallery1>
+    </div>
+  )
 }
 
-export default Gallery;
+export default Galery

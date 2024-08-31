@@ -1,47 +1,13 @@
-"use client"
-import React, { useState, useEffect } from 'react'
+import React from 'react'
+import FadeSlider from './sliders/FadeSlider'
+import Slider1 from './sliders/Slider1'
 
 const Sliders = () => {
-  const [current, setCurrent] = useState(0);
-  const images = ['img1.jpg', 'img2.jpg', 'img3.jpg']; 
-
-  const nextSlide = () => {
-    setCurrent(current === images.length - 1 ? 0 : current + 1);
-  };
-
-  const prevSlide = () => {
-    setCurrent(current === 0 ? images.length - 1 : current - 1);
-  };
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      nextSlide();
-    }, 5000);
-
-    return () => clearInterval(timer);
-  }, [current]);
-
   return (
-    <div className="mt-24 text-center ">
-      <h1 className='text-3xl mb-2'>Sliders</h1>
-      <div className="flex justify-center items-center  gap-10">
-        <button onClick={prevSlide}> &lt;</button>
-        <div className="flex justify-center items-center flex-col">
-          {images.map((image, index) => (
-            <div key={index}>
-              {index === current && (
-                <img src={image} alt="image slider" className="w-72 h-52" />
-              )}
-            </div>
-          ))}
-          <div>
-            {images.map((_, index) => (
-              <span key={index}>{index === current ? "●" : "○"}</span>
-            ))}
-          </div>
-        </div>
-        <button onClick={nextSlide}> &gt;</button>
-      </div>
+    <div className="flex flex-col mt-24 gap-5">
+      <h1 className="text-3xl mb-2 text-center">Sliders</h1>
+      <FadeSlider></FadeSlider>
+      <Slider1></Slider1>
     </div>
   );
 }
